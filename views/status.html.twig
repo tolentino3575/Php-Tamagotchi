@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tamagotchi</title>
+    </head>
+    <body>
+        <h1>Your Tamagotchi status</h1>
+        {% if tamagotchi is not empty %}
+            { % for tama in tamagotchi% }
+            <ul>
+                <li>{{ tama.getStomach }}</li>
+            </ul>
+            {% endfor %}
+        {% endif %}
+        <p>(> * v * )></p>
+
+        <button type='submit'>Pass Time</button>
+
+        <form action="/food" method="post">
+            <button type='submit'>Feed Me</button>
+        </form>
+    </body>
+</html>
